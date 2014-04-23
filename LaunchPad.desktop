@@ -1,0 +1,10 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=LaunchPad
+Comment=Show applications menu
+Exec=gdbus call --session --dest org.gnome.Shell --object-path /org/gnome/Shell --method org.gnome.Shell.Eval 'Main.overview.toggle();Main.overview.viewSelector._showAppsButton.checked = true;';
+Icon=view-grid-symbolic
+Path=
+Terminal=false
