@@ -1,0 +1,9 @@
+{
+ "uuid": "hide-workspace@xenatt.github.com",
+ "extension-id": "hide-workspace ",
+ "gettext-domain": "hide-workspace",
+ "name": "Hide Workspace Thumbnails",
+ "description": "Hide workspace thumbnails on overiew.You cah switch workspace with mouse wheel on overview.Hide WorkSpace thumbnails is part of Minimalism Gnome shell project.",
+ "shell-version": [ "3.12" ],
+ "url": "http://github.com/xenatt/linux"
+}
