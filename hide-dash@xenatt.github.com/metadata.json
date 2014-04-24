@@ -2,9 +2,9 @@
 "shell-version": ["3.10","3.12"],
 "uuid": "hide-dash@xenatt.github.com",
 "name": "Hide Dash X",
-"description": "Hide Dash X aloow you hide dash on overviews.Hide Dash not work with dash to dock.Hide Dash X is part of Minimalism Gome-shell Project",
+"description": "Hide the dash from the activities overview.Hide Dash X is part of Minimalism Gnome shell project.",
 "original-author": "zacbarton",
-"url": "https://github.com/xenatt/gnome-shell-extension-hide-dash",
+"url": "https://github.com/xenatt/Minimalism-Gnome-Shell/edit/master/hide-dash@xenatt.github.com/",
 "gettext-domain": "hide-dash",
 "version": 0
 }
