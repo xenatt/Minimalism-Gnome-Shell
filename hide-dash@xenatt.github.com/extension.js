@@ -5,7 +5,7 @@ const Main = imports.ui.main;
 
 
 // extension functions
-function init() {
+const init = function() {
 	return new dashVisible();
 }
 
