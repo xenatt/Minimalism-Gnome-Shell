@@ -4,7 +4,7 @@ const Lang = imports.lang;
 const Main = imports.ui.main;
 const ThumbnailsSlider = imports.ui.overviewControls.ThumbnailsSlider.prototype; 
 
-function init() {
+const init = function () {
     return new hideVisible();
 }
 
@@ -24,4 +24,5 @@ const hideVisible = new Lang.Class({
     disable: function() {
         ThumbnailsSlider._getAlwaysZoomOut = tmp_getAlwaysZoomOut;
     }
+
 });
