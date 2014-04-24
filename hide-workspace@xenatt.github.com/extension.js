@@ -4,7 +4,6 @@ const Lang = imports.lang;
 const Main = imports.ui.main;
 const St = imports.gi.St;
 
-const Me = imports.misc.extensionUtils.getCurrentExtension();
 
 const hideVisible = new Lang.Class({
     Name: 'hideWorkspace.hideVisible',
@@ -22,10 +21,14 @@ const hideVisible = new Lang.Class({
     },
 
     _hideThumbnails: function() {
+
+        //Thank Api code from Charlie MacEntyre  passingthure67@gmail.com
+        Main.overview._controls._thumbnailsSlider.actor.opacity = 0;
         return true;
     },
 
     _showThumbnails: function() {
+        Main.overview._controls._thumbnailsSlider.actor.opacity = 255;
         return true;
     }
 
