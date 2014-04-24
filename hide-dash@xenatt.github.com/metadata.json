@@ -2,8 +2,7 @@
 "shell-version": ["3.10","3.12"],
 "uuid": "hide-dash@xenatt.github.com",
 "name": "Hide Dash X",
-"description": "Hide the dash from the activities overview.
-				Hide Dash X is part of Minimalism Gnome shell project.",
+"description":"Hide workspace thumbnails on overiew.You can switch workspace with mouse wheel on overview.Hide WorkSpace thumbnails is part of Minimalism Gnome shell project.",
 "original-author": "zacbarton",
 "url": "https://github.com/xenatt/gnome-shell-extension-hide-dash",
 "gettext-domain": "hide-dash",
