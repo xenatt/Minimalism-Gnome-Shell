@@ -1,0 +1,17 @@
+
+.panel-button .expose-button,
+.panel-button .launcpad-button {
+	width: 60px;
+}
+
+.expose-button-icon,
+.launcpad-button-icon {
+    width: 24px;
+    height: 24px;
+    color: rgba(255,255,255,1);
+    padding: 0 5px;
+}
+.expose-button-icon:overview,
+.launcpad-button-icon:overview {
+	color: rgba(0,0,0,1);
+}
