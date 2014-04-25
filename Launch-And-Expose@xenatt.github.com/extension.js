@@ -15,8 +15,8 @@ const Me = ExtensionUtils.getCurrentExtension();
 //I will write option later.
 
 
-const expose_iconPath = Me.path + '/img/windowslist.png';
-const lanchpad_iconPath = Me.path + '/img/logo.png';
+const expose_iconPath = Me.path + '/img/windowslist.svg';
+const lanchpad_iconPath = Me.path + '/img/logo.svg';
 let lanchpad_button, expose_button, rb_index;
 
 
@@ -43,7 +43,7 @@ function disable() {
 }
 function init_expose() {
 
-    expose_button = new St.Bin({ style_class: 'expose-button',
+    expose_button = new St.Bin({ style_class: 'panel-button',
                           reactive: true,
                           can_focus: true,
                           x_fill: true,
@@ -51,7 +51,7 @@ function init_expose() {
                           track_hover: true }); 
     let expose_icon = new St.Icon({ 
                           gicon: Gio.icon_new_for_string(expose_iconPath),
-                          style_class: 'expose-button-icon' });
+                          style_class: 'system-status-icon'});
     expose_button.set_child(expose_icon);
     expose_button.connect('button-press-event', function(){ 
       if (!Main.overview.visible) {
@@ -73,7 +73,7 @@ function disable_expose() {
     Main.panel._rightBox.remove_child(expose_button);
 }
 function init_launchpad() {
-      lanchpad_button = new St.Bin({ style_class: 'launcpad-button',
+      lanchpad_button = new St.Bin({ style_class: 'panel-button',
                           reactive: true,
                           can_focus: true,
                           x_fill: true,
@@ -81,7 +81,7 @@ function init_launchpad() {
                           track_hover: true }); 
     let lanchpad_icon = new St.Icon({ 
                             gicon: Gio.icon_new_for_string(lanchpad_iconPath),
-                            style_class: 'launcpad-button-icon' });
+                            style_class: 'system-status-icon' });
     lanchpad_button.set_child(lanchpad_icon);
     lanchpad_button.connect('button-press-event', function(){ 
       if (!Main.overview.visible) {
