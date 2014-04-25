@@ -16,8 +16,8 @@ const Me = ExtensionUtils.getCurrentExtension();
 
 
 const expose_iconPath = Me.path + '/img/windowslist.svg';
-const lanchpad_iconPath = Me.path + '/img/logo.svg';
-let lanchpad_button, expose_button, rb_index;
+const launchpad_iconPath = Me.path + '/img/logo.svg';
+let launchpad_button, expose_button, rb_index;
 
 
 //I try to write code with New Lang({}) style but wont work.
@@ -32,12 +32,12 @@ function init() {
 }
 
 function enable() {
-    enable_lanchpad();
+    enable_launchpad();
     enable_expose();
 }
 
 function disable() {
-    disable_lanchpad();
+    disable_launchpad();
     disable_expose();
 
 }
@@ -73,17 +73,17 @@ function disable_expose() {
     Main.panel._rightBox.remove_child(expose_button);
 }
 function init_launchpad() {
-      lanchpad_button = new St.Bin({ style_class: 'panel-button',
+      launchpad_button = new St.Bin({ style_class: 'panel-button',
                           reactive: true,
                           can_focus: true,
                           x_fill: true,
                           y_fill: true,
                           track_hover: true }); 
-    let lanchpad_icon = new St.Icon({ 
-                            gicon: Gio.icon_new_for_string(lanchpad_iconPath),
+    let launchpad_icon = new St.Icon({ 
+                            gicon: Gio.icon_new_for_string(launchpad_iconPath),
                             style_class: 'system-status-icon' });
-    lanchpad_button.set_child(lanchpad_icon);
-    lanchpad_button.connect('button-press-event', function(){ 
+    launchpad_button.set_child(launchpad_icon);
+    launchpad_button.connect('button-press-event', function(){ 
       if (!Main.overview.visible) {
         Main.overview.toggle();Main.overview.viewSelector._showAppsButton.checked = true;
       } else { 
@@ -96,12 +96,12 @@ function init_launchpad() {
       }
     }); 
 }
-function enable_lanchpad() {
-    Main.panel._leftBox.insert_child_at_index(lanchpad_button, 0);
+function enable_launchpad() {
+    Main.panel._leftBox.insert_child_at_index(launchpad_button, 0);
     activitiesButton = Main.panel.statusArea['activities'];
     activitiesButton.container.hide();
 }
-function disable_lanchpad() {
-    Main.panel._leftBox.remove_child(lanchpad_button);
+function disable_launchpad() {
+    Main.panel._leftBox.remove_child(launchpad_button);
     activitiesButton.container.show();
 }
