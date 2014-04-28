@@ -54,7 +54,6 @@ function init_expose() {
     // Add Class expose-icon for easy theme.
     expose_button.set_child(expose_icon);
     // Set icon size to 1.3 em.
-    expose_button.child.set_style('icon-size:1.3em;');
     expose_button.connect('button-press-event', function(){ 
       if (!Main.overview.visible) {
         Main.overview.toggle();
@@ -86,7 +85,6 @@ function init_launchpad() {
     // Add Class launchpad-icon for easy theme.
                             style_class: 'system-status-icon launchpad-icon' });
     launchpad_button.set_child(launchpad_icon);
-    launchpad_button.child.set_style('icon-size:1.3em;');
     // Set icon size to 1.3 em.
     launchpad_button.connect('button-press-event', function(){ 
       if (!Main.overview.visible) {
