@@ -25,7 +25,6 @@ let launchpad_button, expose_button, rb_index;
 //I need more infomation.
 //I must reserach more.
 
-
 function init() {
     init_launchpad();
     init_expose();
@@ -51,8 +50,11 @@ function init_expose() {
                           track_hover: true }); 
     let expose_icon = new St.Icon({ 
                           gicon: Gio.icon_new_for_string(expose_iconPath),
-                          style_class: 'system-status-icon'});
+                          style_class: 'system-status-icon expose-icon'});
+    // Add Class expose-icon for easy theme.
     expose_button.set_child(expose_icon);
+    // Set icon size to 1.3 em.
+    expose_button.child.set_style('icon-size:1.3em;');
     expose_button.connect('button-press-event', function(){ 
       if (!Main.overview.visible) {
         Main.overview.toggle();
@@ -81,8 +83,11 @@ function init_launchpad() {
                           track_hover: true }); 
     let launchpad_icon = new St.Icon({ 
                             gicon: Gio.icon_new_for_string(launchpad_iconPath),
-                            style_class: 'system-status-icon' });
+    // Add Class launchpad-icon for easy theme.
+                            style_class: 'system-status-icon launchpad-icon' });
     launchpad_button.set_child(launchpad_icon);
+    launchpad_button.child.set_style('icon-size:1.3em;');
+    // Set icon size to 1.3 em.
     launchpad_button.connect('button-press-event', function(){ 
       if (!Main.overview.visible) {
         Main.overview.toggle();Main.overview.viewSelector._showAppsButton.checked = true;
