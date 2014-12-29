@@ -1,1 +1,12 @@
-{"shell-version": ["3.10","3.12"], "uuid": "Launch-And-Expose@xenatt.github.com", "name": "Launch And Expose", "description": "Show All Running Windows on Overview With Right Button, Show All App on Overview with Left Button"}
+{
+	"description": "Show All Running Windows on Overview With Right Button, Show All App on Overview with Left Button",
+	"name": "Launch And Expose",
+	"shell-version": [
+		"3.10",
+		"3.12",
+		"3.14"
+	],
+	"url": "https://github.com/xenatt/Minimalism-Gnome-Shell",
+	"uuid": "Launch-And-Expose@xenatt.github.com",
+	"version": 1
+}
